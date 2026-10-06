@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    color: #202124;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    min-height: 72px;
+    padding: 18px 7%;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    color: #38bdf8;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    min-height: calc(100vh - 72px);
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background: linear-gradient(120deg, #e0f2fe, #f8fafc);
+}
+
+.left {
+    width: 55%;
+}
+
+.right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #0f172a;
+}
+
+.hero h1 span {
+    color: #0284c7;
+}
+
+.hero h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: #334155;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+.hero button {
+    padding: 14px 28px;
+    border: 0;
+    border-radius: 7px;
+    background: #0284c7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #0369a1;
+}
+
+.right img {
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #38bdf8;
+    box-shadow: 0 12px 35px rgba(0,0,0,.15);
+}
+
+.about,
+.education {
+    padding: 90px 8%;
+    text-align: center;
+    background: white;
+}
+
+.skills,
+.certifications {
+    padding: 90px 8%;
+    text-align: center;
+    background: #f0f9ff;
+}
+
+.about h2,
+.skills h2,
+.education h2,
+.certifications h2,
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+    color: #0369a1;
+}
+
+.about p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #64748b;
+}
+
+.skills-container {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.card {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid #bae6fd;
+    border-radius: 12px;
+    color: #0369a1;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.card:hover {
+    background: #0284c7;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.edu-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background: #f8fafc;
+    border-left: 6px solid #38bdf8;
+    border-radius: 10px;
+    box-shadow: 0 7px 20px rgba(0,0,0,.07);
+}
+
+.edu-card h3 {
+    font-size: 23px;
+    margin-bottom: 18px;
+    color: #1e293b;
+}
+
+.edu-card p,
+.cert-card p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.cert-container {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.cert-card {
+    padding: 32px;
+    background: white;
+    border-radius: 12px;
+    text-align: left;
+    border-top: 5px solid #38bdf8;
+    box-shadow: 0 7px 20px rgba(0,0,0,.07);
+}
+
+.cert-card h3 {
+    color: #0369a1;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.cert-card p {
+    margin-bottom: 8px;
+}
+
+.contact {
+    padding: 75px 8%;
+    text-align: center;
+    background: #1e293b;
+}
+
+.contact h2 {
+    color: #38bdf8;
+}
+
+.contact p {
+    color: #e2e8f0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #0f172a;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+@media (max-width:900px) {
+    nav {
+        padding: 16px 4%;
+    }
+
+    nav ul {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .right img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width:650px) {
+    nav {
+        position: relative;
+        display: block;
+        padding: 18px 15px;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 18px;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 55px 20px;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about,
+    .skills,
+    .education,
+    .certifications,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .about h2,
+    .skills h2,
+    .education h2,
+    .certifications h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .about p,
+    .contact p {
+        font-size: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        min-height: 90px;
+        font-size: 18px;
+    }
+
+    .edu-card,
+    .cert-card {
+        padding: 25px 18px;
+    }
+
+    .cert-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        text-align: center;
+    }
+}
+
+@media (max-width:400px) {
+    nav {
+        padding: 16px 10px;
+    }
+
+    nav ul {
+        gap: 10px 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .right img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 75px;
+    }
+
+    .about,
+    .skills,
+    .education,
+    .certifications,
+    .contact {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
